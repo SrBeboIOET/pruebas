@@ -6,14 +6,6 @@ Version control and proper commit practices are crucial for managing software pr
 
 First, ensure that you have set up a version control system (VCS) such as Git for your project. Git allows you to track changes, collaborate with others, and manage your codebase efficiently.
 
-## Semantic Versioning (SemVer)
-
-As a quick reminder, [Semantic Versioning (SemVer)](https://semver.org/) consists of three parts: **MAJOR**, **MINOR**, and **PATCH**. Increment these versions based on the type of changes:
-
-1. **MAJOR:** For backward-incompatible changes.
-2. **MINOR:** For backward-compatible feature additions.
-3. **PATCH:** For backward-compatible bug fixes.
-
 ## Commit Guidelines
 
 Follow these [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) guidelines to align your versioning with SemVer:
@@ -34,13 +26,37 @@ Follow these [conventional commits](https://www.conventionalcommits.org/en/v1.0.
 
 **3. Breaking Changes:** If your commit includes a backward-incompatible change (MAJOR version), add a footer to the commit message with a **BREAKING CHANGE** tag and a description of the change.
 
-## Version Incrementation
+## Version Incrementation using Semantic Versioning (SemVer)
 
-Use the commit messages to determine the appropriate version increment:
+As a quick reminder, [Semantic Versioning (SemVer)](https://semver.org/) consists of three parts: **MAJOR**, **MINOR**, and **PATCH**. Increment these versions based on the type of changes and use the commit messages to determine the appropriate version increment:
 
-1. **MAJOR:** If any commit message includes a **BREAKING CHANGE**, increment the MAJOR version.
-2. **MINOR:** If there are commits with new features (**feat** scope) but no **BREAKING CHANGE**, increment the MINOR version.
-3. **PATCH:** If there are only bug fixes (**fix** scope), performance improvements (**perf** scope), or other non-breaking changes, increment the PATCH version.
+1. **MAJOR:** For backward-incompatible changes. If any commit message includes a **BREAKING CHANGE**, increment the MAJOR version.
+2. **MINOR:** For backward-compatible feature additions. If there are commits with new features (**feat** scope) but no **BREAKING CHANGE**, increment the MINOR version.
+3. **PATCH:** For backward-compatible bug fixes. If there are only bug fixes (**fix** scope), performance improvements (**perf** scope), or other non-breaking changes, increment the PATCH version.
+
+## Specifying Versioning
+
+You can specify versioning for your software project in various ways:
+
+**1. package.json File:** In JavaScript and Node.js projects, you can specify the version in the package.json file under the "version" field.
+
+**2. Source Code File:** You can define the version as a variable in one of your source code files. For example, in Python, you can have a __version__ variable in a Python file.
+
+**3. Dedicated Version File:** Create a separate file (e.g., version.txt or VERSION) that contains the version number as plain text.
+
+**4. Environment Variable:** Set an environment variable to represent the current version, and your code or build scripts can access it when needed.
+
+**5. Git Tags:** Use annotated Git tags to mark specific versions of your project.
+
+**6. Continuous Integration (CI) Tools:** Some CI/CD (Continuous Integration/Continuous Deployment) tools allow you to set and manage versioning information as part of the build and release process.
+
+**7. Build Systems:** Some build systems allow you to specify version information as part of the build configuration.
+
+**8. Custom Configuration Files:** If your project has a custom configuration file, you can include versioning information within it.
+
+**9. Database:** In some cases, versioning information may be stored in a database for applications that require version tracking.
+
+**10. Version Management Tools:** There are tools and libraries available that are specifically designed to manage versioning for software projects.
 
 ## Example Workflow
 
@@ -95,5 +111,6 @@ This commit improves code style but doesn't trigger a version change. It helps i
 ```bash
 git commit -m "test: Add unit tests for new features."
 ```
+This commit adds tests but doesn't affect the version. It helps in ensuring code quality through tests.
 
 Following this example workflow, you can see how the version increments based on the nature of the commits and the presence of breaking changes.
