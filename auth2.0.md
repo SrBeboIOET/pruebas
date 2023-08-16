@@ -52,3 +52,11 @@ This process ensures that authenticated users have appropriate access to resourc
 - **Access Control:** The backend auth service ensures users have the right permissions for the requested resource.
 - **Communication:** All communication between user interfaces and backend services should be secured (HTTPS).
 - **Security:** Apply security measures to prevent unauthorized access and data breaches.
+
+## What is Open Policy Agent [(OPA)](https://www.openpolicyagent.org/docs/latest/)?
+Is an open-source, general-purpose policy engine that enables organizations to define and enforce policies across various aspects of their software systems. OPA provides a declarative language for expressing policies and a runtime environment for evaluating them against incoming requests or data.
+
+OPA allows you to decouple policy logic from application code, making it easier to manage and update policies independently. It can be integrated into various layers of an application stack, such as microservices, APIs, and admission control in Kubernetes clusters. With OPA, you can define fine-grained access controls, authorization rules, and other policies, ensuring security and compliance across your system.
+
+## How can I configure the permissions using OPA?
+It depends on your project's structure and the conventions followed in your development environment, but generally, permissions are configured in a configuration file named data.yaml, in which you specify the application's name, roles, permissions, and the endpoints that each user type can access depending on their role.
