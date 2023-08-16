@@ -2,8 +2,8 @@
 This guide explains the authentication and authorization process within the application through a series of steps. 
 This process ensures that authenticated users have appropriate access to resources and functions in the application.
 
-## Workflow of Authentication Process
-![image](https://github.com/SrBeboIOET/pruebas/assets/135857180/d5f8c1d7-9b52-41b1-8d56-59d61764ea58)
+## Authentication Process
+![image](https://github.com/ioet/internal-auth-service/raw/develop/diagrams/sequence_diagrams/authentication_flow.png)
 
 ### Step 1: Authentication Request
 - The application sends a GET request to the authentication service in the backend via the route /auth/login/snack-app.
@@ -17,7 +17,6 @@ This process ensures that authenticated users have appropriate access to resourc
 - The backend authentication service generates a session cookie containing relevant user information.
 - With the session cookie established, the user can access the authenticated application.
 ### Keep in mind:
-
 - **Security:** Ensure all communication is over HTTPS to protect data in transit.
 - **Token Validation:** Thoroughly validate received tokens to prevent tampering.
 - **Token Expiration Handling:** Properly handle token expiration and refresh tokens to avoid unauthorized access.
@@ -30,4 +29,26 @@ This process ensures that authenticated users have appropriate access to resourc
 - **Logout Mechanism:** Provide a secure logout mechanism to prevent session hijacking.
 - **Regulatory Compliance:** Ensure compliance with relevant regulations like GDPR to avoid legal consequences.
 
-## Workflow of Authorization Process
+## Authorization Process
+![image](https://github.com/ioet/internal-auth-service/raw/develop/diagrams/sequence_diagrams/authorization_flow.png)
+### Step 1: User Authentication
+- The user interface initiates user authentication by sending an HTTP request to the auth service in the backend using the established domain in the application.
+- The backend auth service generates a session cookie, and the user interface sends a GET request to the application backend to fetch user data.
+### Step 2: Checking User Access
+- The application backend sends a GET request to the backend auth service to determine whether the user has access or not.
+- The backend auth service validates the user's session. If the user does not have a registered session in the application, a "401. Could not validate credentials" error is displayed, and the backend sends a session response to the user interface.
+- If the user has a registered session, the user's status is verified by the backend auth service. If the user is inactive, a "403. User does not have enough permissions" error is sent to the application backend. The backend responds with "User does not have permissions."
+- If the user is not inactive, the backend checks if the user has access to a specific resource using OPA (Open Policy Agent), which handles policies and permissions assigned to the user. The OPA defines what actions the user is allowed to perform on the requested resource.
+### Step 3: Permission Verification
+- The backend auth service informs the application backend whether the user has the necessary permissions.
+- If the user has the required permissions, the application backend processes the request.
+- If the user does not have the necessary permissions, a "403. User does not have enough permissions" error is sent from the backend to the user interface.
+### Keep in mind:
+- **User Authentication:** Ensure secure user authentication through the backend auth service.
+- **Session Handling:** The backend auth service manages session cookies for authenticated users.
+- **User Status:** Verify if the user is active or inactive to determine permission status.
+- **Permissions Verification:** Use OPA to verify user permissions based on predefined policies.
+- **Error Handling:** Properly handle errors and responses for unauthorized and inactive users.
+- **Access Control:** The backend auth service ensures users have the right permissions for the requested resource.
+- **Communication:** All communication between user interfaces and backend services should be secured (HTTPS).
+- **Security:** Apply security measures to prevent unauthorized access and data breaches.
