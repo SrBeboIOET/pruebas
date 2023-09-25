@@ -1,3 +1,26 @@
+# Technologies used in the frontend
+
+## React
+
+- React is widely used in frontend development due to its focus on creating reusable components and its ability to handle efficient updates. It facilitates the creation of dynamic and modern user interfaces.
+- It uses a component-based model to break down the user interface into reusable and easy-to-maintain parts.
+
+## TypeScript
+
+- TypeScript adds a static type system to JavaScript, helping detect errors before runtime and facilitating collaboration in large projects.
+- It provides a safer and more robust way to develop applications, especially in team environments.
+
+## Vite
+- Vite is a fast and flexible web development environment that provides a real-time development server and efficient module loading.
+- It enables instant browser reloading and optimized production builds.
+
+## Node.js
+
+- Node.js is a JavaScript runtime environment on the server side.
+- It allows the creation of web servers, route handling, processing HTTP requests, accessing databases, and other server-side operations.
+- It is particularly suitable for real-time applications and REST APIs due to its efficient handling of concurrent connections.
+
+
 ## How to run the project?
 
 - Clone the repo
@@ -63,7 +86,7 @@ Version control and proper commit practices are crucial for managing software pr
 
 First, ensure that you have set up a version control system (VCS) such as Git for your project. Git allows you to track changes, collaborate with others, and manage your codebase efficiently.
 
-## Commit Guidelines
+## Commits Standard
 
 Follow these [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary) guidelines to align your versioning with SemVer:
 
