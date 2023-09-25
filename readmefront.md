@@ -20,65 +20,40 @@
 - It allows the creation of web servers, route handling, processing HTTP requests, accessing databases, and other server-side operations.
 - It is particularly suitable for real-time applications and REST APIs due to its efficient handling of concurrent connections.
 
+# Steps to start working on it
 
-## How to run the project?
+## Commands to start the project
 
-- Clone the repo
+## Enviroment variables request
 
-```bash
-git clone https://github.com/ioet/ioet-snack-app-frontend.git
-```
+# Description of the Makefile commands
 
-## Nodejs Installation Instructions
+## How to run the lint
+
+## How to run the tests
+
+## (all the Makefile commands well documented)
+
+# How to contribute to the project
+
+## commits standard
+
+## pull request template
+
+## pull request naming (to pass the CI)
 
 
-# Install all necessary dependencies:
 
 
 
-## Runnig Linters and mypy implemetantion
-
-If you need to check your project use:
-
-```bash
-poetry run flake8 
-```
-
-If you need to check just a .py file use:
-
-```bash
-poetry run flake8 my_project/myfile.py
-```
-
-If you need to do static a verification your project use:
-
-```bash
-poetry run mypy 
-```
-
-If you need to do static a verification just a . py use:
-
-```bash
-poetry run mypy my_project/myfile.py
-```
 
 ## Suggestions to make a correct pull request
 
 - Be sure to work in the branch that corresponds to you.
 - Don't forget to work on your own.
 - If you have no comments in any section, you should not delete the title.
-## How to run the app
 
-the next steps help to run the app with FastAPI
-
-### API
-1. `cd api`
-2. Create a Python virtual environment
-3. `pip install -r requirements`
-4. `python runner.py`
-
-
-# Guide to Using Commits and Semantic Versioning (SemVer)
+# How to contribute to the project
 
 Version control and proper commit practices are crucial for managing software projects effectively. Combining commits with Semantic Versioning (SemVer) helps maintain a clear history of changes and enables developers to communicate the impact of updates clearly. This guide will walk you through the process of using commits and SemVer together in your development workflow.
 
