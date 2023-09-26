@@ -21,13 +21,13 @@
 - It is particularly suitable for real-time applications and REST APIs due to its efficient handling of concurrent connections.
 
 ## Jest
-- Jest is a testing framework for fast tests.
-- It is compatible with Typescript.
+- Jest is a testing framework designed for fast tests.
+- It is compatible with TypeScript.
 
 ## Installation of dependencies
 ### Node.js
-1. Open the next link https://nodejs.org/es, download the LTS version and install it.
-2. Update NPM, the Node package manager, in order to fetch the latest dependencies, use the next command:
+1. Open the following link https://nodejs.org/es, download the LTS version, and install it.
+2. UTo fetch the latest dependencies, update NPM (the Node Package Manager) using the following command:
 
 ```bash
 npm install -g npm@latest
@@ -47,19 +47,19 @@ npm install vite --save-dev
 # Steps to start working on this project
 
 ## Commands to start the project
-1. Clone the github repository using the next command:
+1. Clone the GitHub repository using the following command:
 ```bash
 git clone https://github.com/ioet/ioet-snack-app-frontend.git
 ```
-2. Create the .env file in the next path: ioet-snack-app-frontend/
-3. In the .env file you should create the environmental variables (ask the team the variables).
-4. Run the next command in this path: ioet-snack-app-frontend/
+2. Create the .env file in the following path: ioet-snack-app-frontend/
+3. In the .env file you should define the environmental variables (ask the team for the variables).
+4. Run the following command in this path: ioet-snack-app-frontend/
 ```bash
 npm run dev
 ```
 
 ## How to run the lint
-Use the next command:
+Use the following command:
 ```bash
 npm run lint
 ```
@@ -70,30 +70,11 @@ npm run lint:fix
 
 ## How to run the tests
 
-Use the next command:
+Use the following command:
 ```bash
 npm run test
 ```
 
-# How to contribute to the project
-
-## commits standard
-
-## pull request template
-
-## pull request naming (to pass the CI)
-
-
-
-
-
-
-## Suggestions to make a correct pull request
-
-- Be sure to work in the branch that corresponds to you.
-- Don't forget to work on your own.
-- If you have no comments in any section, you should not delete the title.
-- 
 
 # How to contribute to the project
 
@@ -213,3 +194,41 @@ fix: SK-202 cualquier nombre del p
 This commit adds tests but doesn't affect the version. It helps in ensuring code quality through tests.
 
 Following this example workflow, you can see how the version increments based on the nature of the commits and the presence of breaking changes.
+
+## Pull request template
+
+After you have made the Git push, please complete the Pull Request (PR) template file located in the following path within the project: ioet-snack-app-frontend/.github/pull_request_template.md. This template should be filled out on the GitHub page when you confirm the PR in your branch.
+
+- In the section "Describe your changes," provide a brief description of the work related to your ticket.
+- In the next section "Issue ticket number and link," include your ticket number and its link, using the following example:
+```bash
+[SK-#](ticketLink)
+Replace "#" with your ticket number
+```
+- In the section "Type of change," mark the type of your change in the project (considering the standard commits).
+- Next, mark the "Checklist" to confirm that your code compiles correctly.
+- In the section "Acceptance criteria," copy and paste the acceptance criteria from your ticket.
+- In the last section "Notes," you can write any observations about your progress. Additionally, you can include a screenshot as evidence that your code is functioning correctly.
+
+## Pull request naming (to pass the CI)
+The pull request naming standard is the next:
+```bash
+commit scope: SK-# little description
+```
+- For the commit scope, you can use one of the following:
+build, ci, docs, feat, fix, perf, refactor, or test.
+- Replace the "#" with your ticket number
+- The description should be concise and provide a brief summary of the changes.
+  
+You can base it on the following examples:
+```bash
+feat: SK-123 Implement user registration
+fix: SK-456 Resolve login validation issue
+docs: SK-789 Update installation instructions
+```
+
+## Suggestions to make a correct pull request
+
+- Be sure to work in the branch that corresponds to you.
+- Don't forget to work on your own.
+- If you have no comments in any section, you should not delete the title.
