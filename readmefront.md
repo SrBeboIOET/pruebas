@@ -20,6 +20,10 @@
 - It allows the creation of web servers, route handling, processing HTTP requests, accessing databases, and other server-side operations.
 - It is particularly suitable for real-time applications and REST APIs due to its efficient handling of concurrent connections.
 
+## Jest
+- Jest is a testing framework for fast tests.
+- It is compatible with Typescript.
+
 ## Installation of dependencies
 ### Node.js
 1. Open the next link https://nodejs.org/es, download the LTS version and install it.
@@ -40,7 +44,7 @@ npm install -g create-react-app
 ```bash
 npm install vite --save-dev
 ```
-# Steps to start working on it
+# Steps to start working on this project
 
 ## Commands to start the project
 1. Clone the github repository using the next command:
@@ -48,17 +52,28 @@ npm install vite --save-dev
 git clone https://github.com/ioet/ioet-snack-app-frontend.git
 ```
 2. Create the .env file in the next path: ioet-snack-app-frontend/
-3. In the .env file you should create en environmental variables (ask the team the variables).
+3. In the .env file you should create the environmental variables (ask the team the variables).
 4. Run the next command in this path: ioet-snack-app-frontend/
 ```bash
 npm run dev
 ```
 
 ## How to run the lint
+Use the next command:
+```bash
+npm run lint
+```
+If you need correct the linters, use the next command:
+```bash
+npm run lint:fix
+```
 
 ## How to run the tests
 
-## (all the Makefile commands well documented)
+Use the next command:
+```bash
+npm run test
+```
 
 # How to contribute to the project
 
@@ -78,6 +93,7 @@ npm run dev
 - Be sure to work in the branch that corresponds to you.
 - Don't forget to work on your own.
 - If you have no comments in any section, you should not delete the title.
+- 
 
 # How to contribute to the project
 
