@@ -20,13 +20,39 @@
 - It allows the creation of web servers, route handling, processing HTTP requests, accessing databases, and other server-side operations.
 - It is particularly suitable for real-time applications and REST APIs due to its efficient handling of concurrent connections.
 
+## Installation of dependencies
+### Node.js
+1. Open the next link https://nodejs.org/es, download the LTS version and install it.
+2. Update NPM, the Node package manager, in order to fetch the latest dependencies, use the next command:
+
+```bash
+npm install -g npm@latest
+```
+
+3. Install Create React App, which is a command-line interpreter (CLI) that allows us to easily set up React and includes Webpack for project compilation and minification, live reload functionality, a basic structure for ReactJS projects, use the next command:
+
+```bash
+npm install -g create-react-app
+```
+### Vite
+1. Run the following command at the root of your project to install Vite as a local dependency:
+
+```bash
+npm install vite --save-dev
+```
 # Steps to start working on it
 
 ## Commands to start the project
-
-## Enviroment variables request
-
-# Description of the Makefile commands
+1. Clone the github repository using the next command:
+```bash
+git clone https://github.com/ioet/ioet-snack-app-frontend.git
+```
+2. Create the .env file in the next path: ioet-snack-app-frontend/
+3. In the .env file you should create en environmental variables (ask the team the variables).
+4. Run the next command in this path: ioet-snack-app-frontend/
+```bash
+npm run dev
+```
 
 ## How to run the lint
 
